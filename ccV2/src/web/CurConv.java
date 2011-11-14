@@ -16,8 +16,8 @@ public class CurConv extends HttpServlet {
 		String c3 = request.getParameter("Money");
 		CurExpert ce = new CurExpert();
 		String result = ce.getMoney(c1,c2,c3);
-		request.setAttribute("result", result);
-		RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+		request.setAttribute("result", result);	
+		RequestDispatcher view = request.getRequestDispatcher("result.jsp");
 		view.forward(request, response);
 	}
 }

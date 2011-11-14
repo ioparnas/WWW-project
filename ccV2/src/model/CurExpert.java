@@ -8,15 +8,15 @@ import com.google.gson.*;
 public class CurExpert{
 	public String getMoney(String From, String To, String Money) {
 		if (From.equals(To))  return("No convertion needed.<br>You already have "+To );
-		if (Money.length()>12) return("Input is to long... <br>I m not paid enough for this!");
+		if (Money.length()>12) return("Input is too long... <br>I m not paid enough for this!");
 		try{
 			if(Double.parseDouble(Money)<0) 
-				return("<br>"+ api(From,To,Money)+"<br>Your money are subzer0! fail.");
+				return(api(From,To,Money)+"<br>Your money are subzer0! fail.");
 			else
-				return("<br>"+ api(From,To,Money));
+				return(api(From,To,Money));
 		}
 		catch(Exception error){
-			return("<br>Type a number plz");
+			return("Type a number plz");
 		}
 		
 	}
@@ -41,7 +41,7 @@ public class CurExpert{
     		private Boolean icc;
 
    		public String toString() {
-        		return String.format("From : "+lhs + "   <br>To   : "+rhs);
+        		return(rhs);
     	
 		}
 	}
