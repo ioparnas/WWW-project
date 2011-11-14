@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+<style type="text/css">
+div.top
+{
+background-color:#335050;
+height:110px;
+width:600px;
+border-style:solid;
+border-width:4px;
+}
+div.bigmiddle
+{
+background-color:#335050;
+height:540px;
+width:460px;
+border-style:solid;
+border-width:15px;
+}
+select
+{
+font-size:18px;
+}
+button
+{
+background-color:#335050;
+font-size:24px;
+color:white;
+}
+div.middle
+{
+background-color:#335050;
+height:480px;
+width:400px;
+}
+form{
+text-align:right;
+}
+h1{
+
+color:white;
+font-family:"Times New Roman";
+}
+body{
+background-image:url('http://www.designassembly.org/wp-content/uploads/2009/03/da_making_money_warhol_01.jpg');
+background-size:cover;
+
+
+background-color:#C9C9C9;
+}
+p{
+font-family:"Times New Roman";
+font-size:40px;
+}
+</style>
+<title>Currency Converter</title>
+<script type="text/javascript">
+function checkNumber(){
+if(isNaN(document.getElementById("Money").value))
+alert('Your input is not a valid number -.- ');
+else
+alert('Good to go. ');
+}
+function swap(){
+var tmp = document.getElementById("From").value;
+document.getElementById("From").value= document.getElementById("To").value;
+document.getElementById("To").value=tmp;
+}
+
+</script>
+</head>
+
+<body>
+<center>
+<div class="top">
+<h1 align="center">Currency Converter <br>Version 1.0.3</h1>
+</div>
+<br><br>
+<div class="bigmiddle">
+<div class="middle">
+<p align=center>Give me the Money</p>
+<form method="POST"
+action="currencyconvert.do" >
+<p>   From :
+<select id="From" name="From" size="1">
+<option value="EUR"> Euro </option>
+<option value="USD"> Dollars </option>
+<option value="AED"> United Arab Emirates Dirham </option>
+<option value="GBP"> British Pound Sterling </option>
+<option value="TRY"> Turkish Lira </option>
+<option value="INR"> Indian Rupee </option>
+<option value="RUB"> Russian Ruble </option>
+<option value="JPY"> Japanese Yen </option>
+</select>
+<p>To : 
+<select id="To" name="To" size="1">
+<option value="EUR"> Euro </option>
+<option value="USD"> Dollars </option>
+<option value="AED"> United Arab Emirates Dirham </option>
+<option value="GBP"> British Pound Sterling </option>
+<option value="TRY"> Turkish Lira </option>
+<option value="INR"> Indian Rupee </option>
+<option value="RUB"> Russian Ruble </option>
+<option value="JPY"> Japanese Yen </option>
+</select><br><center><button type="button" onclick="swap();">Swap</button></center>
+<p>Amount :
+<input type="text" id="Money" name="Money"><br>
+<center>
+<button type="button" onclick="checkNumber();">Validate</button>
+<button type="SUBMIT">I feel Ready</button>
+</center>
+</form>
+</div>
+</div>
+</center>
+</body>
+</html>
