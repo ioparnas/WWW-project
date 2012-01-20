@@ -1,13 +1,17 @@
-Project 3
+Project 4
 
-For the beans version my jstl libs were working locally but not when i deployed it in infserver,
-so i copied some info in mey dd and some libs in my WEB-INF folder from the first working application i found.
-I send cookies with a nasty scriplet and i leave the rest of the work to EL and jstl.
+I used the struts version that was already included in neteans, but after i tested  the examples 
+i didnt want to use anything in my project, since i was focused to find a way to get rid of the 
+scriplets for sending cookies.
+Struts still was not ale to do this so i found a taglib that had exactly what i was looking for 
+and i added it. I also kept the stadard jstl for some logic functions, that could e redone with 
+struts <logic:> tag but the mechanism for cookie handling should be reconstructed...
 
-In the scriptlet version the a single file, index.jsp does all the work. 
+The cookie sender mechanism is the same as project 3, but now instead of a scriplet 
+i use a cookietag tld. It Checks if we have a request, if not it checks for cookies 
+and if thats false too it inits values to 0.
 
-The cookie sender mechanism is the same in both versions. It Checks if we have a request, if not it checks for cookies
-and if thats false too it init the values to 0. What i succed by that is checking for cookies only if it is the 
-first time i open the application. In the bean version i do the checks with <c:choose>.
+I extracted the war file in my tomcat (not the netbean's one) and after 
+i tested the result i deployed it at inf-server. In github i have uploaded 
+the netbean's directory.
 
-There is nothing else hard to see in my files.
